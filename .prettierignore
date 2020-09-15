@@ -1,0 +1,12 @@
+/node_modules
+/build
+/dist
+.vscode
+package.json
+# .prettierrc
+
+# every{directory|file} include pattern 
+src/**/*.js
+
+# every{directory|file} exclude pattern 
+!src/components/index.js

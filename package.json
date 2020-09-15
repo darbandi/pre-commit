@@ -1,0 +1,31 @@
+{
+  "name": "eslints",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx src --ignore-path ./.eslintignore",
+    "lint:fix": "eslint --fix --ext .js,.jsx src --ignore-path ./.eslintignore",
+    "prettier": "prettier \"src/**/*.js\" --ignore-path ./.prettierignore",
+    "format": "npm run prettier --write ",
+    "format:check": "npm run prettier --check",
+    "validate": "npm run format:check && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -v && npm run validate"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1"
+  }
+}
