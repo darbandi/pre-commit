@@ -1,3 +1,5 @@
-const a = "asdasd";
+const a = "asdasd"
+
+;
 
 console.log(a);
